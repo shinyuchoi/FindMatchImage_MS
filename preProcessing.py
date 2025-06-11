@@ -8,7 +8,7 @@ This script loads images from the 'images' directory and extracts feature data (
 then saves the keypoints and descriptors into the 'savedData' folder as .npz files.
 '''
 
-
+###
 def extract_features(image_folder='images', feature_folder='savedData'):
     # Create output folder if it doesn't exist
     os.makedirs(feature_folder, exist_ok=True)

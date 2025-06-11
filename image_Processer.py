@@ -55,7 +55,7 @@ def capture_screen(region):
 # Find the top N matching images from the database
 # Based on SIFT feature matching
 
-def find_top_matches(input_img, top_n, feature_folder='savedData', image_folder='images'):
+def find_top_matches(input_img, top_n, feature_folder='savedData', image_folder='images', region=None):
     input_gray = cv2.cvtColor(input_img, cv2.COLOR_BGR2GRAY)
     kp_input, des_input = detector.detectAndCompute(input_gray, None)
 
@@ -103,7 +103,16 @@ def find_top_matches(input_img, top_n, feature_folder='savedData', image_folder=
     # Show concatenated matching results
     if matched_images:
         collage = np.hstack(matched_images)
-        cv2.imshow(f"Top Matches ({threading.current_thread().name})", collage)
+        window_name = f"Top Matches ({threading.current_thread().name})"
+        cv2.imshow(window_name, collage)
+
+        if region:
+            x, y, w, h = region
+            collage_width = collage.shape[1]
+            window_x = x - (collage_width // 2) + (w // 2)  # Center of capture frame
+            window_y = max(0, y - 250)  # On capture frame
+            cv2.moveWindow(window_name, window_x, window_y)
+
         cv2.waitKey(1)
 
 
@@ -112,5 +121,5 @@ def find_top_matches(input_img, top_n, feature_folder='savedData', image_folder=
 def main_loop(region, top_n=7, rate=0.5):
     while True:
         input_img = capture_screen(region)
-        find_top_matches(input_img, top_n)
+        find_top_matches(input_img, top_n, region=region)
         time.sleep(rate)

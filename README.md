@@ -10,7 +10,7 @@ This Python project performs real-time screen image matching using the SIFT feat
 - SIFT-based feature detection and matching
 - Feature caching to `.npz` for performance
 - GUI overlay to visualize capture region (Tkinter)
-- Unicode path and Korean font support
+- Unicode path support
 - Multithreaded processing (UI + matching)
 
 ---

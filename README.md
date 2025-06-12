@@ -104,10 +104,10 @@ The system is capable of finding accurate matches even when the selected region 
 
 
 ## Limitation
-<img src="git_Resources/limitation/limitationBoar0.png" width="70%">
-<img src="git_Resources/limitation/limitationBoar2.png" width="70%">
-<img src="git_Resources/limitation/limitationFlower0.png" width="70%">
-<img src="git_Resources/limitation/limitationFlower2.png" width="70%">
+<img src="git_Resources/limitation/limitationBoar0.png" width="50%">
+<img src="git_Resources/limitation/limitationBoar2.png" width="50%">
+<img src="git_Resources/limitation/limitationFlower0.png" width="50%">
+<img src="git_Resources/limitation/limitationFlower2.png" width="50%">
 Although the two images clearly show the same flower-type monster, SIFT produced only 1–2 good matches.
 Surprisingly, an unrelated blue fish character yielded more matches (2–3), despite being visually and semantically different.
 

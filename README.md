@@ -130,3 +130,7 @@ Across multiple trials involving 50 distinct characters, it successfully matched
 - Provide a simple web service (Flask or FastAPI) to expose the matching system
   - Upload screen captures and receive top-N matched images as response
 ---
+
+## License
+
+MIT License

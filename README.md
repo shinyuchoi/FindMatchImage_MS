@@ -9,8 +9,8 @@ what appears on the screen and find the most similar image from a set of known c
 
 To build the reference dataset, I crawled and downloaded over 500 NPC images from the game's online community.
 Since manually identifying them during the quiz was nearly impossible, automating the recognition process became essential.
+**This project solves a real problem by combining computer vision and real-time interaction, enabling fast and automated recognition during time-constrained gameplay.**
 
-This project solves a real problem by combining computer vision and real-time interaction.
 ---
 
 ## Features

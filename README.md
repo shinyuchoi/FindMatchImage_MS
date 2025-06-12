@@ -1,12 +1,11 @@
 # Real-Time Screen Image Matcher (SIFT-based)
+> Built in May 2025 as a practical response to a real-time recognition challenge during an in-game event.
 
 ## Motivation
 
 In an online game, there was a timed event where players had to identify NPCs quickly.
 As a beginner who didn't recognize any of them, I built this tool to automatically analyze
 what appears on the screen and find the most similar image from a set of known characters.
-
-This project solves a real problem by combining computer vision and real-time interaction.
 
 To build the reference dataset, I crawled and downloaded over 500 NPC images from the game's online community.
 Since manually identifying them during the quiz was nearly impossible, automating the recognition process became essential.
@@ -130,5 +129,4 @@ Across multiple trials involving 50 distinct characters, it successfully matched
 - Enable user feedback loop to retrain with misclassified data
 - Provide a simple web service (Flask or FastAPI) to expose the matching system
   - Upload screen captures and receive top-N matched images as response
-  - 
 ---

@@ -72,7 +72,7 @@ python main.py
 
 - If `savedData/` does not exist, or the number of `.npz` files doesn't match the number of images, feature extraction will run automatically.
 - A semi-transparent red box will appear; move it over your screen to define the matching area.
-- The script will display the top 7 matching images in a popup window.
+- The script will display the top 5 matching images in a popup window.
 - Press `Enter` key to exit.
 
 ---

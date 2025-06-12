@@ -1,7 +1,17 @@
 # Real-Time Screen Image Matcher (SIFT-based)
 
-This Python project performs real-time screen image matching using the SIFT feature detection algorithm. It extracts features from reference images, compares them with real-time screen captures, and displays the most similar matches in a visual overlay.
+## Motivation
 
+In an online game, there was a timed event where players had to identify NPCs quickly.
+As a beginner who didn't recognize any of them, I built this tool to automatically analyze
+what appears on the screen and find the most similar image from a set of known characters.
+
+This project solves a real problem by combining computer vision and real-time interaction.
+
+To build the reference dataset, I crawled and downloaded over 500 NPC images from the game's online community.
+Since manually identifying them during the quiz was nearly impossible, automating the recognition process became essential.
+
+This project solves a real problem by combining computer vision and real-time interaction.
 ---
 
 ## Features
@@ -64,6 +74,8 @@ python main.py
 
 ---
 
+
+
 ## Logic Summary
 
 - `main.py` handles initial checks and starts threads for:
@@ -71,6 +83,12 @@ python main.py
   - `UI.show_capture_window()` for visual capture overlay
 - `preprocessing.py` extracts features using SIFT, ORB, BRISK, AKAZE (though only SIFT is used in matching).
 - Matching is based on descriptor similarity using Lowe's ratio test.
+
+### Demo
+
+![demo-initional run](git_Resources/demo/demo1.gif)
+![demo](git_Resources/demo/demo2.gif)
+
 
 
 ## Future Improvements

@@ -7,7 +7,7 @@ import UI
 import os
 
 # === Configuration ===
-top_n = 7
+top_n = 5
 rate = 0.5
 image_folder = 'images'
 feature_folder = 'savedData'

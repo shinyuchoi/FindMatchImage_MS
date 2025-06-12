@@ -37,6 +37,10 @@ project-root/
 └── main.py             # Entry point: initializes extraction + threads
 ```
 
+### used images
+![images](git_Resources/ImagesFolder.png)
+
+
 ---
 
 ## Requirements
@@ -84,11 +88,38 @@ python main.py
 - `preprocessing.py` extracts features using SIFT, ORB, BRISK, AKAZE (though only SIFT is used in matching).
 - Matching is based on descriptor similarity using Lowe's ratio test.
 
-### Demo
+## Demo
 
 ![demo-initional run](git_Resources/demo/demo1.gif)
-![demo](git_Resources/demo/demo2.gif)
+> At first launch, all reference images are processed to extract features.  
+> In the demo, this was ~500 images — but the system is capable of handling much larger datasets efficiently.
 
+
+![demo](git_Resources/demo/demo2.gif)
+> Every 0.5 seconds (default), the screen within the red capture box is analyzed.  
+> The system compares it with the reference image dataset and shows the **top 5 most similar images** in real-time.
+
+![demo](git_Resources/demo/demo3.png)
+The system is capable of finding accurate matches even when the selected region (red rectangle) does not completely enclose the target image.
+
+
+## Limitation
+![Limitation Case1](git_Resources/limitation/limitationBoar0.png)
+![Limitation Case1 Analysis](git_Resources/limitation/limitationBoar2.png)
+
+![Limitation Case2](git_Resources/limitation/limitationFlower0.png)
+![Limitation Case2 Analysis](git_Resources/limitation/limitationFlower2.png)
+Although the two images clearly show the same flower-type monster, SIFT produced only 1–2 good matches.
+Surprisingly, an unrelated blue fish character yielded more matches (2–3), despite being visually and semantically different.
+
+#### Possible reasons:
+- **Lack of texture** — smooth surfaces produce fewer detectable features  
+- **Rotation and scale difference** — can reduce match quality despite invariance  
+- **Background interference** — affects gradient patterns near object edges
+
+
+## Evaluation
+Across multiple trials involving 50 distinct characters, it successfully matched more than **45 out of 50** cases on average — even under minor variations in rotation, scale, or lighting. For future robustness, hybrid approaches or learning-based methods may help overcome these limitations.
 
 
 ## Future Improvements

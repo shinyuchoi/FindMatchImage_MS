@@ -2,3 +2,5 @@ images/
 savedData/
 .idea/
 __pycache__/
+SIFTChecker.py
+git_Resources/limitation/limitationBoar.png

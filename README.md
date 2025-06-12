@@ -133,7 +133,3 @@ Across multiple trials involving 50 distinct characters, it successfully matched
   - Upload screen captures and receive top-N matched images as response
   - 
 ---
-
-## License
-
-MIT License

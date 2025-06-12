@@ -104,11 +104,10 @@ The system is capable of finding accurate matches even when the selected region 
 
 
 ## Limitation
-![Limitation Case1](git_Resources/limitation/limitationBoar0.png)
-![Limitation Case1 Analysis](git_Resources/limitation/limitationBoar2.png)
-
-![Limitation Case2](git_Resources/limitation/limitationFlower0.png)
-![Limitation Case2 Analysis](git_Resources/limitation/limitationFlower2.png)
+<img src="git_Resources/limitation/limitationBoar0.png" width="70%">
+<img src="git_Resources/limitation/limitationBoar2.png" width="70%">
+<img src="git_Resources/limitation/limitationFlower0.png" width="70%">
+<img src="git_Resources/limitation/limitationFlower2.png" width="70%">
 Although the two images clearly show the same flower-type monster, SIFT produced only 1–2 good matches.
 Surprisingly, an unrelated blue fish character yielded more matches (2–3), despite being visually and semantically different.
 
@@ -133,3 +132,7 @@ Across multiple trials involving 50 distinct characters, it successfully matched
   - Upload screen captures and receive top-N matched images as response
   - 
 ---
+
+## License
+
+MIT License
